@@ -7,6 +7,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -50,5 +51,10 @@ public class OrderController {
     @GetMapping("/getPort")
     public String getPort(){
         return "请求到了订单服务,端口号:"+port;
+    }
+
+    @GetMapping("/greeting")
+    public String sayHello(@RequestParam("name")String name){
+        return port+": hello,"+name;
     }
 }
