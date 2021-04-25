@@ -20,6 +20,7 @@ public class MyFilterConfig implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 //        exchange.getRequest().getHeaders().
+//        exchange.getRequest().getURI().equals("/xfnihao");
         String username = exchange.getRequest().getQueryParams().getFirst("username");
         if (null == username) {
             System.out.println("非法用户");
