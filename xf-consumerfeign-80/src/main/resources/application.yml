@@ -1,0 +1,46 @@
+server:
+  port: 80
+spring:
+  application:
+    name: xf-consumer
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    #prefer-ip-address: true  #显示IP地址
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/  #集群
+  instance:
+    prefer-ip-address: true
+    #instance-id: myorder-service
+    #eureka客户端向服务端发送心跳的间隔
+    lease-renewal-interval-in-seconds: 1
+    #eureka服务端收到最后一次心跳后的等待时间间隔上线，超过立即剔除
+    lease-expiration-duration-in-seconds: 2
+
+#设置feign客户端超时时间(OpenFeign默认支持ribbon)
+ribbon:
+  #指的是建立连接所用的时间,适用于网络状况正常的情况下,两端连接所用的时间
+  ReadTimeout: 5000
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
+#feign日志功能
+logging:
+  level:
+    com.gz.xf.feign.OrderFeignService: debug
+
+
+#服务降级超时设置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds:
+              3000
+
+feign:
+  hystrix:
+    enabled: true

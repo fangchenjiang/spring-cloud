@@ -1,0 +1,21 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: xf-eureka-7001
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    #eureka不需要向注册中心注册自己
+    register-with-eureka: false
+    #false不需要去检索其他微服务
+    fetch-registry: false
+    service-url:
+      #eureka服务器交互地址
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka7002.com:7002/eureka/
+  server:
+    enable-self-preservation: false  #关闭自我保护机制,保证服务服务用立刻被剔除
+    eviction-interval-timer-in-ms: 2000

@@ -1,0 +1,20 @@
+server:
+  port: 80
+spring:
+  application:
+    name: xf-consumer
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+  #prefer-ip-address: true  #显示IP地址
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/  #集群
+  instance:
+    prefer-ip-address: true
+    #instance-id: myorder-service
+    #eureka客户端向服务端发送心跳的间隔
+    lease-renewal-interval-in-seconds: 1
+    #eureka服务端收到最后一次心跳后的等待时间间隔上线，超过立即剔除
+    lease-expiration-duration-in-seconds: 2
