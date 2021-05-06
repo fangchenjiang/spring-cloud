@@ -2,16 +2,15 @@ package com.gz.xf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * @Description 消息生生产者启动类
+ * @Description MQ消费者主启动类
  * @Author Fangchenjiang
- * @Date 2021/4/25 23:01
+ * @Date 2021/5/6 20:28
  */
 @SpringBootApplication
-public class MQProviderApplication {
+public class MQConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MQProviderApplication.class,args);
+        SpringApplication.run(MQConsumerApplication.class,args);
     }
 }

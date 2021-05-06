@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>xf-stream-mq-provider-8801</artifactId>
+    <artifactId>xf-stream-mq-consumer-8802</artifactId>
 
     <dependencies>
 
@@ -26,5 +26,4 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
-
 </project>

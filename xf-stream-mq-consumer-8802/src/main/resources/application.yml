@@ -1,5 +1,5 @@
 server:
-  port: 8801
+  port: 8802
 
 spring:
   cloud:
@@ -16,12 +16,13 @@ spring:
                 password: admin
                 virtual-host: /
       bindings:
-        output:
+        input:
           destination: testExchange
           content-type: application/json
           default-binder: test
+          group: mqgroup      #MQ分组机制,为避免重复消费，多个消费者实例group必须保证相同
   application:
-    name: xf-mq-provider
+    name: xf-mq-consumer-8802
 
 
 eureka:

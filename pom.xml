@@ -19,6 +19,7 @@
         <module>xf-hystrix-dashboard-9001</module>
         <module>xf-gateway-9527</module>
         <module>xf-stream-mq-provider-8801</module>
+        <module>xf-stream-mq-consumer-8802</module>
     </modules>
     <packaging>pom</packaging>
 

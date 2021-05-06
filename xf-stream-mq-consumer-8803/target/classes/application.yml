@@ -1,5 +1,5 @@
 server:
-  port: 8801
+  port: 8803
 
 spring:
   cloud:
@@ -16,12 +16,13 @@ spring:
                 password: admin
                 virtual-host: /
       bindings:
-        output:
+        input:
           destination: testExchange
           content-type: application/json
           default-binder: test
+#          group: mqgroup
   application:
-    name: xf-mq-provider
+    name: xf-mq-consumer-8803
 
 
 eureka:
