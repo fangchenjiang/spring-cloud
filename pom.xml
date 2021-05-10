@@ -20,6 +20,9 @@
         <module>xf-gateway-9527</module>
         <module>xf-stream-mq-provider-8801</module>
         <module>xf-stream-mq-consumer-8802</module>
+        <module>xf-payment-9001</module>
+        <module>xf-payment-9002</module>
+        <module>xf-consumer-83</module>
     </modules>
     <packaging>pom</packaging>
 
