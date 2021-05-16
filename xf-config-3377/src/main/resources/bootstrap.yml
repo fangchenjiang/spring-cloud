@@ -9,10 +9,12 @@ spring:
     nacos:
       config:
         file-extension: yml
+        namespace: 39b40e83-daf2-4600-9841-72036153d552
       discovery:
         server-addr: localhost:8848
   profiles:
     active: dev
+
 
 
 management:
