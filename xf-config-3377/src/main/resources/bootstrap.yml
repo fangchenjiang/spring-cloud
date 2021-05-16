@@ -1,0 +1,23 @@
+server:
+  port: 3377
+
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+      discovery:
+        server-addr: localhost:8848
+  profiles:
+    active: dev
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
