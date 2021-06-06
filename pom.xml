@@ -24,6 +24,7 @@
         <module>xf-payment-9002</module>
         <module>xf-consumer-83</module>
         <module>xf-config-3377</module>
+        <module>xf-service-8401</module>
     </modules>
     <packaging>pom</packaging>
 
